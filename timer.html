@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="bg-gradient-to-r from-[rgba(238,174,202,1)] to-[rgba(148,187,233,1)]" style="color: aqua;">
+    <h2 class="flex md:items-center justify-center">DIGITAL CLOCK</h2>
+    <main class="flex md:items-center justify-center mt-[250px] text-[70px] px-[300px]  gap-4 font-serif">
+        <div class="border">
+            <span id="hour">12</span>:
+            <span>hours</span>
+        </div>
+        <div class="border">
+            <span id="minute">51</span>:
+            <span>minuteS</span>
+        </div>
+        <div class="border">
+            <span id="second">33</span>:
+            <span>seconds</span>
+        </div>
+        <div class="border">
+            <span id="millisec"></span>:
+            <span>milliseconds</span>
+        </div>
+        <span id="time" class="text-orange-600">PM</span>
+    </main>
+
+
+
+    <script>
+        //target my element//
+        const hour = document.getElementById('hour')
+        const min = document.getElementById('minute')
+        const sec = document.getElementById('second')
+        const ampm = document.getElementById('time')
+        const mls = document.getElementById('millisec')
+
+        function updateTime(){
+            const h = new Date().getHours()
+            const m = new Date().getMinutes()
+            const s = new Date().getSeconds()
+            const ms = new Date().getMilliseconds()
+            
+            hour.textContent = h > 12 ? `0${h - 12}` : h
+            min.textContent = m
+            sec.textContent = s < 10 ? `0${s}` :s
+            ampm.textContent = h < 12 ? "AM" : "PM"
+            mls.textContent = ms
+
+            setTimeout(() => updateTime(), 100)
+        }
+
+        updateTime()
+    </script>
+</body>
+</html>
