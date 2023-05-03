@@ -116,7 +116,7 @@
             const ms = new Date().getMilliseconds()
             
             hour.textContent = h > 12 ? `0${h - 12}` : h
-            min.textContent = m
+            min.textContent = m < 10 ? `0${m - 10}`:m
             sec.textContent = s < 10 ? `0${s}` :s
             ampm.textContent = h < 12 ? "AM" : "PM"
             mls.textContent = ms
