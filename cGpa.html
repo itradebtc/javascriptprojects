@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>CGPA calculator</title>
+</head>
+<body>
+  <main class="md:h-screen mt-10 text-center w-4/5  mx-auto md:flex md:flex-col justify-center items-center">
+    <h1 class="md:text-5xl text-3xl text-center">
+          Cumulative Grade Point Average Calculator
+    </h1>
+    <form class="mx-auto md:w-3/4 text-center space-y-6 border border-red-700">
+      <div class="flex md:w-3/5 mx-auto items-center justify-around md:py-6 ">
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="courses">Courses</label>
+          <input type="text" name="course_code" id="courses" required placeholder="Course Code" class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+        </div>
+  
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="creditUnit">Credit Units</label>
+          <select name="" id="creditUnit" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+            <optgroup>
+              <option value="" >Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+           </optgroup>
+          </select>  
+        </div>
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="grades">Grades</label>
+        <select name="" id="grades" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+          <optgroup>
+            <option value="">Select</option>
+            <option class="grade" value="5">A</option>
+            <option class="grade" value="4">B</option>
+            <option class="grade" value="3">C</option>
+            <option class="grade" value="2">D</option>
+            <option class="grade" value="1">E</option>
+            <option class="grade" value="0">F</option>
+          </optgroup>
+        </select>
+        </div>
+      </div>
+    </form>
+    <!-- <form class="mx-auto md:w-3/4 text-center space-y-6 border border-red-700">
+      <div class="flex md:w-3/5 mx-auto items-center justify-around md:py-6 ">
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="courses">Courses</label>
+          <input type="text" name="course_code" id="course_code" required placeholder="Course Code" class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+        </div>
+  
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="credit">Credit Units</label>
+          <select name="" id="creditUnit" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+            <optgroup>
+              <option value="" >Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+           </optgroup>
+          </select>  
+        </div>
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="grades">Grades</label>
+        <select name="" id="grades" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+          <optgroup>
+            <option value="">Select</option>
+            <option class="grade" value="5">A</option>
+            <option class="grade" value="4">B</option>
+            <option class="grade" value="3">C</option>
+            <option class="grade" value="2">D</option>
+            <option class="grade" value="1">E</option>
+            <option class="grade" value="0">F</option>
+          </optgroup>
+        </select>
+        </div>
+      </div>
+    </form>
+    <form class="mx-auto md:w-3/4 text-center space-y-6 border border-red-700">
+      <div class="flex md:w-3/5 mx-auto items-center justify-around md:py-6 ">
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="courses">Courses</label>
+          <input type="text" name="course_code" id="course_code" required placeholder="Course Code" class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+        </div>
+  
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="credit">Credit Units</label>
+          <select name="" id="creditUnit" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+            <optgroup>
+              <option value="" >Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+           </optgroup>
+          </select>  
+        </div>
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="grades">Grades</label>
+        <select name="" id="grades" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+          <optgroup>
+            <option value="">Select</option>
+            <option class="grade" value="5">A</option>
+            <option class="grade" value="4">B</option>
+            <option class="grade" value="3">C</option>
+            <option class="grade" value="2">D</option>
+            <option class="grade" value="1">E</option>
+            <option class="grade" value="0">F</option>
+          </optgroup>
+        </select>
+        </div>
+      </div>
+    </form>
+    <form class="mx-auto md:w-3/4 text-center space-y-6 border border-red-700">
+      <div class="flex md:w-3/5 mx-auto items-center justify-around md:py-6 ">
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="courses">Courses</label>
+          <input type="text" name="course_code" id="course_code" required placeholder="Course Code" class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+        </div>
+  
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="credit">Credit Units</label>
+          <select name="" id="creditUnit" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+            <optgroup>
+              <option value="" >Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+           </optgroup>
+          </select>  
+        </div>
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="grades">Grades</label>
+        <select name="" id="grades" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+          <optgroup>
+            <option value="">Select</option>
+            <option class="grade" value="5">A</option>
+            <option class="grade" value="4">B</option>
+            <option class="grade" value="3">C</option>
+            <option class="grade" value="2">D</option>
+            <option class="grade" value="1">E</option>
+            <option class="grade" value="0">F</option>
+          </optgroup>
+        </select>
+        </div>
+      </div>
+    </form>
+    <form class="mx-auto md:w-3/4 text-center space-y-6 border border-red-700">
+      <div class="flex md:w-3/5 mx-auto items-center justify-around md:py-6 ">
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="courses">Courses</label>
+          <input type="text" name="course_code" id="course_code" required placeholder="Course Code" class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+        </div>
+  
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="credit">Credit Units</label>
+          <select name="" id="creditUnit" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+            <optgroup>
+              <option value="" >Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+           </optgroup>
+          </select>  
+        </div>
+        
+        <div class="flex flex-col">
+          <label class="md:text-xl" for="grades">Grades</label>
+        <select name="" id="grades" required class="md:w-48 w-24 border rounded-md py-2 self-center text-center">
+          <optgroup>
+            <option value="">Select</option>
+            <option class="grade" value="5">A</option>
+            <option class="grade" value="4">B</option>
+            <option class="grade" value="3">C</option>
+            <option class="grade" value="2">D</option>
+            <option class="grade" value="1">E</option>
+            <option class="grade" value="0">F</option>
+          </optgroup>
+        </select>
+        </div>
+      </div>
+    </form>  -->
+
+    <div class="text-center">
+      <h2 class="text-3xl">
+      </h2>
+    </div>
+
+    <div>
+      <button id="btn" class="bg-black text-white m-3 p-3 rounded-xl">
+        Calculate CGPA
+      </button>
+    </div>
+  
+  </main>
+
+    <script>
+
+        const creditUnit = document.getElementById('creditUnit')
+        const grades = document.getElementById('grades')
+        const para = document.querySelector('h2')
+        const btn = document.querySelector('button')
+
+        function totalGrade(){
+            let cu = creditUnit.value
+            let gu = grades.value
+            let status
+            const totalGrade = cu * gu
+            
+            if(totalGrade >= 4.5){
+                status = 'First Class'
+            }
+
+            else if(totalGrade >= 3.50){
+                status = '2nd Class Upper Division'
+            }
+
+            else if(totalGrade >= 2.5){
+                status = '2nd Class Lower Division'
+            }
+            
+            else{
+                status = '3rd Class'
+            }
+
+            return para.textContent = `Your CGPA is = ${totalGrade.toFixed(2)} and your Degree Classification is ${status}`
+        }
+
+        btn.addEventListener('click', totalGrade)
+
+      // function calc(creditUnit, grade) {
+      //   if (grade === "A") {
+      //     return 5 * creditUnit;
+      //   } else if (grade === "B") {
+      //     return 4 * creditUnit;
+      //   } else if (grade === "C") {
+      //     return 3 * creditUnit;
+      //   } else if (grade === "D") {
+      //     return 2 * creditUnit;
+      //   } else if (grade === "E") {
+      //     return 1 * creditUnit;
+      //   } else{
+      //     return 0 * creditUnit;
+      //   }
+      // }
+
+      // const cgpaCalc = document.querySelector("h2");
+      // cgpaCalc.innerHTML = totalGrade(5,"A");
+      
+      // console.log(totalGrade(5,"A"))
+
+      // button.addEventListener('click', totalGrade)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 1</title>
+    <!-- <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style> -->
+
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+    <button id="push">Add Fruit</button>
+
+  </body>
+  <script>
+    
+    const list = document.createElement('ul');
+    const btn = document.getElementById('push');
+
+
+    // Add your code here
+    
+    
+
+    function addFruit(){
+        const myArray = [];
+        let y = prompt('add another fruit')
+        myArray.push(y)
+
+        for (let x = 0; x < myArray.length; x++) {
+        const listitem = document.createElement('li');
+        list.append(listitem)
+        return listitem.textContent = myArray[x]
+    }
+    }
+
+    btn.addEventListener('click', addFruit)
+
+    
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    section.appendChild(list);
+  </script>
+
+</html>
